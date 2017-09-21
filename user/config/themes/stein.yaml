@@ -1,0 +1,16 @@
+enabled: true
+footer_icons:
+  1:
+    icon: fa-twitter
+    link: 'https://www.twitter.com/'
+  2:
+    icon: fa-facebook
+    link: 'https://www.facebook.com/'
+  3:
+    icon: fa-instagram
+    link: 'https://www.instagram.com/'
+footer_items:
+  -
+    item: '&copy; Jens Stein'
+  -
+    item: 'Code: <a href="https://rhalbmann.de">Rainer Halbmann</a>'

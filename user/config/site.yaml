@@ -1,0 +1,17 @@
+title: 'Jens Stein'
+default_lang: de
+author:
+  name: 'Jens Stein'
+  email: thejensstein@thejensstein.com
+taxonomies:
+  - category
+  - tag
+metadata:
+  description: 'Jens Stein is the best art director ever.'
+summary:
+  enabled: true
+  format: short
+  size: 300
+  delimiter: '==='
+blog:
+  route: /blog

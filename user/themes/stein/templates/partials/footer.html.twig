@@ -1,0 +1,76 @@
+<footer id="footer">
+    <!--{% if theme_config.footer_icons|length > 0 %}
+    <ul class="actions">
+        {% for icon in theme_config.footer_icons %}
+        <li><a href="{{ icon.link }}" class="icon {{ icon.icon }}"></a></li>
+        {% endfor %}
+    </ul>
+    {% endif %}-->
+    <div class="footerlogo">
+        <img src="/user/themes/stein/assets/css/images/Logo_unten.svg" alt="{{site_name}}" width="100%" height="100%" />
+    </div>
+    <div class="footercopy">
+        <p>Art und Creative Direction, Konzept, Text und Gestaltung</p>
+        <p>
+            <a class="icon" href="tel:+491706856423">
+                <img src="/user/themes/stein/assets/css/images/phone_schwarz.svg" width="45.3281" height="45.3281" />
+            </a>
+            <a class="icon" href="mailto:thejensstein@thejensstein.com">
+                <img src="/user/themes/stein/assets/css/images/mail_schwarz.svg" width="45.3281" height="45.3281" />
+            </a>
+            <a class="icon" href="https://www.facebook.com/stein1">
+                <img src="/user/themes/stein/assets/css/images/facebook.svg" width="45.3281" height="45.3281" />
+            </a>
+            <a class="icon" href="https://twitter.com/TheJensStein">
+                <img src="/user/themes/stein/assets/css/images/twitter.svg" width="45.3281" height="45.3281" />
+            </a>
+            <a class="icon" href="http://artdirectorman.blogspot.de">
+                <img src="/user/themes/stein/assets/css/images/blogger.svg" width="45.3281" height="45.3281" />
+            </a>
+            <a class="icon" href="https://www.xing.com/profile/Jens_Stein3">
+                <img src="/user/themes/stein/assets/css/images/xing.svg" width="45.3281" height="45.3281" />
+            </a>
+            <a class="icon" href="https://de.linkedin.com/in/TheJensStein">
+                <img src="/user/themes/stein/assets/css/images/linkedin.svg" width="45.3281" height="45.3281" />
+            </a>
+        </p>
+        <p>Jens Stein<br />
+            Skalitzer Str. 74a<br />
+            10997 Berlin
+        </p>
+        <p>
+            <a href="tel:+491706856423">+49 170 685 64 23</a>
+        </p>
+        <p>
+            <a href="mailto:thejensstein@thejensstein.com">thejensstein@thejensstein.com</a>
+        </p>
+        <p>&nbsp;</p>
+    </div>
+    <!--{% if theme_config.footer_items|length > 0 %}
+    <ul class="menu">
+        {% for item in theme_config.footer_items %}
+        <li>{{ item.item }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}-->
+</footer>
+{% block javascripts %}
+    {% if browser.getBrowser == 'msie' and browser.getVersion <= 8 %}
+        {% do assets.addJs('theme://assets/js/ie/html5shiv.js') %}
+    {% endif %}
+
+    {% if browser.getBrowser == 'msie' and browser.getVersion <= 8 %}
+        {% do assets.addJs('theme://assets/js/ie/respond.min.js') %}
+    {% endif %}
+
+    {% do assets.addJs('jquery', {'priority':103, 'pipeline':true, 'loading':'async defer'}) %}
+    {% do assets.addJs('theme://assets/js/jquery.poptrox.min.js', {'priority':102, 'pipeline':true, 'loading':'async defer'}) %}
+    {% do assets.addJs('theme://assets/js/jquery.dropotron.min.js', {'priority':102, 'pipeline':true, 'loading':'async defer'}) %}
+    {% do assets.addJs('theme://assets/js/jquery.onvisible.min.js', {'priority':102, 'pipeline':true, 'loading':'async defer'}) %}
+    {% do assets.addJs('theme://assets/js/jquery.scrolly.min.js', {'priority':102, 'pipeline':true, 'loading':'async defer'}) %}
+    {% do assets.addJs('theme://assets/js/jquery.scrollex.min.js', {'priority':102, 'pipeline':true, 'loading':'async defer'}) %}
+    {% do assets.addJs('theme://assets/js/skel.min.js', {'priority':102, 'pipeline':true, 'loading':'async defer'}) %}
+    {% do assets.addJs('theme://assets/js/util.js', {'priority':102, 'pipeline':true, 'loading':'async defer'}) %}
+    {% do assets.addJs('theme://assets/js/main.js', {'priority':102, 'pipeline':true, 'loading':'async defer'}) %}
+{% endblock %}
+{{ assets.js() }}

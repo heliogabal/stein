@@ -1,0 +1,58 @@
+{% block head %}
+<title>{% if header.title %}{{ header.title }} {% else %} {{ site.title }} {% endif %}</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+{% for meta in page.metadata %}
+    {% if meta.name != 'generator' %}
+    <meta {% if meta.name %}name="{{ meta.name }}" {% endif %}{% if meta.http_equiv %}http-equiv="{{ meta.http_equiv }}" {% endif %}{% if meta.charset %}charset="{{ meta.charset }}" {% endif %}{% if meta.property %}property="{{ meta.property }}" {% endif %}{% if meta.content %}content="{{ meta.content }}" {% endif %}/>
+    {% endif %}
+{% endfor %}
+
+{% if header.robots %}
+<meta name="robots" content="{{ header.robots }}">
+{% endif %}
+
+<link rel="icon" href="{{ url('theme://images/favicon.png', true) }}" />
+
+{% block stylesheets %}
+    {% do assets.addCss('theme://assets/css/font-awesome.min.css', {'pipeline':false, 'loading': 'inline'}) %}
+    {% do assets.addCss('theme://assets/css/main.css', {'pipeline':false, 'loading': 'inline'}) %}
+
+    {% if browser.getBrowser == 'msie' and browser.getVersion <= 8 %}
+        {% do assets.addCss('theme://assets/css/ie8.css') %}
+    {% endif %}
+
+    {% if browser.getBrowser == 'msie' and browser.getVersion == 9 %}
+        {% do assets.addCss('theme://assets/css/ie9.css') %}
+    {% endif %}
+    <!--
+/**
+ * @license
+ * MyFonts Webfont Build ID 2993342, 2015-03-18T10:57:22-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: FF Olsen Web by FontFont
+ * URL: http://www.myfonts.com/fonts/fontfont/olsen/ot-regular/
+ *
+ * Webfont: FF Olsen Web Light by FontFont
+ * URL: http://www.myfonts.com/fonts/fontfont/olsen/ot-light/
+ *
+ *
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2993342
+ * Licensed pageviews: 500,000
+ * Webfonts copyright: 2010 Morten Olsen published by FSI FontShop International GmbH
+ *
+ * © 2015 MyFonts Inc
+*/
+
+-->
+{% do assets.addCss('theme://assets/fonts/ffolsen/MyFontsWebfontsKit.css', {'pipeline':false, 'loading': 'inline'}) %}
+{% endblock %}
+{{ assets.css() }}
+{% endblock head %}

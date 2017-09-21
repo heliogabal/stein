@@ -1,0 +1,19 @@
+{% set subpages =  page.find('/home').header.content.order.custom %}
+{% set nextSubPageIndex = -1 %}
+{% for subpage in subpages %}
+    {% if page.folder == subpage %}
+        {% set nextSubPageIndex = loop.index %}
+    {% endif %}
+{% endfor %}
+
+{% set img = page.media[header.background_image] %}
+
+<section id="{{ page.folder|replace({'_': ''}) }}" class="main style2 dark fullscreen" style="background-image: url('{{ img.derivatives(320,1600,300).sizes('(max-width:26em) 100vw, 50vw').enableProgressive().url }}');
+">
+    <div class="content container 75%">
+        {{ content }}
+    </div>
+    {% if subpages[nextSubPageIndex] %}
+            <a href="#{{ subpages[nextSubPageIndex]|replace({'_': ''}) }}" class="button style2 down anchored">Next</a>
+        {% endif %}
+</section>

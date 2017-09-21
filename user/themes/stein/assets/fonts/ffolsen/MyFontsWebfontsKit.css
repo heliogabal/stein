@@ -1,0 +1,33 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 2993342, 2015-03-18T10:57:22-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: FF Olsen Web by FontFont
+ * URL: http://www.myfonts.com/fonts/fontfont/olsen/ot-regular/
+ *
+ * Webfont: FF Olsen Web Light by FontFont
+ * URL: http://www.myfonts.com/fonts/fontfont/olsen/ot-light/
+ *
+ *
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2993342
+ * Licensed pageviews: 500,000
+ * Webfonts copyright: 2010 Morten Olsen published by FSI FontShop International GmbH
+ *
+ * © 2015 MyFonts Inc
+*/
+
+
+
+
+
+@font-face {font-family: 'FFOlsenWeb';src: url('/user/themes/stein/assets/fonts/ffolsen/2DACBE_0_0.eot');src: url('/user/themes/stein/assets/fonts/ffolsen/2DACBE_0_0.eot?#iefix') format('embedded-opentype'),url('/user/themes/stein/assets/fonts/ffolsen/2DACBE_0_0.woff2') format('woff2'),url('/user/themes/stein/assets/fonts/ffolsen/2DACBE_0_0.woff') format('woff'),url('/user/themes/stein/assets/fonts/ffolsen/2DACBE_0_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'FFOlsenWebLight';src: url('/user/themes/stein/assets/fonts/ffolsen/2DACBE_1_0.eot');src: url('/user/themes/stein/assets/fonts/ffolsen/2DACBE_1_0.eot?#iefix') format('embedded-opentype'),url('/user/themes/stein/assets/fonts/ffolsen/2DACBE_1_0.woff2') format('woff2'),url('/user/themes/stein/assets/fonts/ffolsen/2DACBE_1_0.woff') format('woff'),url('/user/themes/stein/assets/fonts/ffolsen/2DACBE_1_0.ttf') format('truetype');}
+
